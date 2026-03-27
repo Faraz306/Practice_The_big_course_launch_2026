@@ -3,6 +3,23 @@ import pandas as pd
 # The Logic: Make the logo appear at the top of the left sidebar
 # and set the width to 150 pixels so it's clean and small.
 st.sidebar.image("img_3.png", width=150)
+def send_email():
+    from email.message import EmailMessage
+    password = "ccug yybj hkhp ekjv"
+    user_email = "farazyamaan@gmail.com"
+    receiver_email = "farazyamaan@gmail.com"
+    import smtplib
+    def send_email():
+        email_msg = EmailMessage()
+        email_msg['Subject'] = ('Hello To Yamaan Faraz Course.')
+        email_msg.set_content("Hello, And welcome!. Sorry, But our free course is in development. But it will be available in 2027 or 2028. until then, wish you good luck!")
+
+        gmail = smtplib.SMTP('smtp.gmail.com', 587)
+        gmail.ehlo()
+        gmail.starttls()
+        gmail.login(user_email, password)
+        gmail.sendmail(user_email, receiver_email, email_msg.as_string())
+        gmail.quit()
 # 1. THE INITIALIZATION: This creates the "Short-Term Memory"
 if 'clicked' not in st.session_state:
     st.session_state['clicked'] = False
@@ -26,6 +43,7 @@ if st.session_state['clicked']:
     if st.button("Submit Login", key="2"):
         st.success("Login Successful")
         st.write(f"Logged in as: {email}")
+        send_email()
         for image in df["Picture"][:1]:
             st.image(image, width=50)
             st.success("Great developers from Python")
@@ -44,6 +62,7 @@ if st.session_state['clicked']:
     if st.button("Submit Login", key="50"):
         st.success("Login Successful")
         st.write(f"Logged in as: {email}")
+        send_email()
         for image in df["Picture"][2:]:
             st.image(image, width=50)
             st.success("Professional companies")
@@ -60,21 +79,3 @@ long-term resource for growth.
 """)
 
 "https://yffirstownappcoursein2026or2027.streamlit.app/"
-
-def send_email():
-    from email.message import EmailMessage
-    password = "ccug yybj hkhp ekjv"
-    user_email = "farazyamaan@gmail.com"
-    receiver_email = "farazyamaan@gmail.com"
-    import smtplib
-    def send_email():
-        email_msg = EmailMessage()
-        email_msg['Subject'] = ('Hello To Yamaan Faraz Course.')
-        email_msg.set_content("Hello, And welcome!. Sorry, But our free course is in development. But it will be available in 2027 or 2028. until then, wish you good luck!")
-
-        gmail = smtplib.SMTP('smtp.gmail.com', 587)
-        gmail.ehlo()
-        gmail.starttls()
-        gmail.login(user_email, password)
-        gmail.sendmail(user_email, receiver_email, email_msg.as_string())
-        gmail.quit()
