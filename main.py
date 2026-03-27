@@ -3,23 +3,23 @@ import pandas as pd
 # The Logic: Make the logo appear at the top of the left sidebar
 # and set the width to 150 pixels so it's clean and small.
 st.sidebar.image("img_3.png", width=150)
-def send_email():
-    from email.message import EmailMessage
-    password = "ccug yybj hkhp ekjv"
-    user_email = "farazyamaan@gmail.com"
-    receiver_email = "farazyamaan@gmail.com"
-    import smtplib
-    def send_email():
-        email_msg = EmailMessage()
-        email_msg['Subject'] = ('Hello To Yamaan Faraz Course.')
-        email_msg.set_content("Hello, And welcome!. Sorry, But our free course is in development. But it will be available in 2027 or 2028. until then, wish you good luck!")
+import smtplib
+import ssl
 
-        gmail = smtplib.SMTP('smtp.gmail.com', 587)
-        gmail.ehlo()
-        gmail.starttls()
-        gmail.login(user_email, password)
-        gmail.sendmail(user_email, receiver_email, email_msg.as_string())
-        gmail.quit()
+
+def send_email(message):
+    host = 'smtp.gmail.com'
+    port = 465
+    user_name = "private.1984@gmail.com"
+    password = "vgdzqjkmngawbldm"
+    reciever = "private.1984@gmail.com"
+
+    context = ssl.create_default_context()
+
+    with smtplib.SMTP_SSL(host, port, context=context) as server:
+        server.login(user_name, password)
+        server.sendmail(user_name, reciever, message)
+
 # 1. THE INITIALIZATION: This creates the "Short-Term Memory"
 if 'clicked' not in st.session_state:
     st.session_state['clicked'] = False
@@ -43,7 +43,7 @@ if st.session_state['clicked']:
     if st.button("Submit Login", key="2"):
         st.success("Login Successful")
         st.write(f"Logged in as: {email}")
-        send_email()
+        send_email("Hello, To Yamaan faraz Course, Our course is in development. release: 2027 or 2028")
         for image in df["Picture"][:1]:
             st.image(image, width=50)
             st.success("Great developers from Python")
@@ -62,7 +62,7 @@ if st.session_state['clicked']:
     if st.button("Submit Login", key="50"):
         st.success("Login Successful")
         st.write(f"Logged in as: {email}")
-        send_email()
+        send_email("Hello, To Yamaan faraz Course, Our course is in development. release: 2027 or 2028")
         for image in df["Picture"][2:]:
             st.image(image, width=50)
             st.success("Professional companies")
