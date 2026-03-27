@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-
 # The Logic: Make the logo appear at the top of the left sidebar
 # and set the width to 150 pixels so it's clean and small.
 st.sidebar.image("img_3.png", width=150)
@@ -50,3 +49,32 @@ if st.session_state['clicked']:
             st.success("Professional companies")
 for image in df["Picture"]:
     st.image(image, width=50)
+st.write("---")
+st.subheader("The YF™ Mission for Free Python Education")
+st.write("""
+Welcome to the official **YF™ App**, a dedicated platform created by **Yamaan Faraz** to provide a **free Python course for beginners**. Our goal is to make 
+**learning programming** accessible to everyone, with a focus on 
+**Python logic**, **coding tutorials**, and **software development** without charging a single penny. Whether you are looking for a 
+**Python 101 guide** or **advanced coding logic**, the YF™ portal is your 
+long-term resource for growth.
+""")
+
+"https://yffirstownappcoursein2026or2027.streamlit.app/"
+
+def send_email():
+    from email.message import EmailMessage
+    password = "ccug yybj hkhp ekjv"
+    user_email = "farazyamaan@gmail.com"
+    receiver_email = "farazyamaan@gmail.com"
+    import smtplib
+    def send_email():
+        email_msg = EmailMessage()
+        email_msg['Subject'] = ('Hello To Yamaan Faraz Course.')
+        email_msg.set_content("Hello, And welcome!. Sorry, But our free course is in development. But it will be available in 2027 or 2028. until then, wish you good luck!")
+
+        gmail = smtplib.SMTP('smtp.gmail.com', 587)
+        gmail.ehlo()
+        gmail.starttls()
+        gmail.login(user_email, password)
+        gmail.sendmail(user_email, receiver_email, email_msg.as_string())
+        gmail.quit()
