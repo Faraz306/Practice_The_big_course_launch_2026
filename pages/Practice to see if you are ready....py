@@ -1,4 +1,5 @@
 import streamlit as st
+import time
 
 st.title("Hello!")
 st.write("Choose an option. No AI Use.")
@@ -17,6 +18,8 @@ elif b1:
 elif b2:
     st.session_state['answered_correctly'] = True
 if st.session_state['answered_correctly']:
+    st.spinner("Wait a minute...")
+    time.sleep(5)
     st.success("Your Answer is absolutely right :).")
     st.code("print('Hello, World.')")
     st.markdown("In the command line, it will print **Hello, World.**")
@@ -24,3 +27,7 @@ if st.session_state['answered_correctly']:
     i = st.text_input(placeholder="Your name?", label="Write your name here...", key="name")
     if i:
         st.success(f"Hello, {i} .Nice to meet you!")
+        bar = st.progress(5, text="Go to page 'Do you understand' and earn your whole progress. Bye! and wish You Good luck :)")
+        st.balloons()
+        st.snow()
+        st.toast("Good Progress. Go to 'Do you understand' and get the YF Certification", icon="✅")

@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import time
 # The Logic: Make the logo appear at the top of the left sidebar
 # and set the width to 150 pixels so it's clean and small.
 st.sidebar.image("img_3.png", width=150)
@@ -43,10 +44,13 @@ if st.session_state['clicked']:
     if st.button("Submit Login", key="2"):
         st.success("Login Successful")
         st.write(f"Logged in as: {email}")
+        st.spinner("Sending a mail to your email...")
+        time.sleep(3)
         send_email("Hello, To Yamaan faraz Course, Our course is in development. release: 2027 or 2028")
         for image in df["Picture"][:1]:
             st.image(image, width=50)
             st.success("Great developers from Python")
+            st.toast(f"Successfully logged in as {email}!", icon="✅")
         # Here is where you would check 'email' against your 'db'
 st.title("For Developers")
 
@@ -62,10 +66,13 @@ if st.session_state['clicked']:
     if st.button("Submit Login", key="50"):
         st.success("Login Successful")
         st.write(f"Logged in as: {email}")
+        st.spinner("Sending a mail to your email...")
+        time.sleep(3)
         send_email("Hello, To Yamaan faraz Course, Our course is in development. release: 2027 or 2028")
         for image in df["Picture"][2:]:
             st.image(image, width=50)
             st.success("Professional companies")
+            st.toast(f"Successfully logged in as {email}!", icon="✅")
 for image in df["Picture"]:
     st.image(image, width=50)
 st.write("---")
