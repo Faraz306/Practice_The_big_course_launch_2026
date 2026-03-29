@@ -14,7 +14,7 @@ Jack *beated* Tillu a lot. then stole Dad's *Love* for Tillu. when i was 8 years
 started crying for other *cats*. So far, we didn't found any, but then, Someone came and gave a cat on 8th - October - 2024. It's name was *Rozie*,
 and she was a female. She gave *4 kittens* on 24th - December - 2024. kittens: Chinu, Pinu, Kalia and Tinu. Kalia and Tinu were sold. Then i 
 started with Scratch ("It isn't a language, it is a game."), Then JavaScript ("Oh no 😨, So much Hard!I better quit.") then *Rozie* gave two 
-kittens on June - 2025. Kittens: Kalia and Cacto. Kalia was an early criminal. when *Rozie*Gave 6 kittens on September - 2025 and Sadly, 1 passed away, 
+kittens on June - 2025. Kittens: Kalia and Cacto. Kalia was an early criminal. when *Rozie* Gave 6 kittens on September - 2025 and Sadly, 1 passed away, 
 then Kalia killed everyone and Ate a whole kitten. Then on September - 2025, I started *Python* ("Recommended."). on that same month, 
 it was my *Brother's* birthday. on February, It was my *Birthday*. on March - 11th - 2026, Rozie gave 4 kittens Sadly, 1 passed and 3 were safe. 
 and on March 28, "I came 1st in 3rd class." I am 10 years old and a 3rd class student Studying in **Meerut Public School, Main wing**. \n
@@ -57,6 +57,36 @@ img_path = os.path.join(base_dir, "WIN_20260303_01_48_59_Pro.jpg")
 if os.path.exists(img_path):
     st.title("Me...")
     st.image(img_path, caption="Yamaan Faraz - The Architect")
+else:
+    st.error("The image is still missing from the main folder! 😩")
+    st.info(f"Looking for: {img_path}")
+import os
+
+# 1. Look for the main folder (AC-app-Practice)
+base_dir = os.path.dirname(os.path.dirname(__file__))
+
+# 2. Use the CORRECT spelling you just found
+img_path = os.path.join(base_dir, "WIN_20260329_06_41_35_Pro.jpg")
+
+# 3. The Shield: Show the image ONLY if the path is 100% real
+if os.path.exists(img_path):
+    st.title("**Jack...**")
+    st.image(img_path, caption="The **King**, Old warrior and a dad But a deceiver cat who deceived **Tillu**")
+else:
+    st.error("The image is still missing from the main folder! 😩")
+    st.info(f"Looking for: {img_path}")
+import os
+
+# 1. Look for the main folder (AC-app-Practice)
+base_dir = os.path.dirname(os.path.dirname(__file__))
+
+# 2. Use the CORRECT spelling you just found
+img_path = os.path.join(base_dir, "WIN_20260329_11_18_42_Pro.jpg")
+
+# 3. The Shield: Show the image ONLY if the path is 100% real
+if os.path.exists(img_path):
+    st.title("**Jack... With the Architect**")
+    st.image(img_path, caption="The **King**, With a legend!")
 else:
     st.error("The image is still missing from the main folder! 😩")
     st.info(f"Looking for: {img_path}")
