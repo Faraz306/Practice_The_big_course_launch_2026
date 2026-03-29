@@ -8,7 +8,6 @@ if st.button("🏅 EARN MEDAL"):
         with open("YF_schools.txt", "a") as f:
             f.writelines(f"{student_name}\n")
             f.flush() # This forces Python to let go of the text!
-
         st.header(f"✨ {student_name} ✨")
         st.image("img_4.png", width=300)
         st.write("Complete course, get medal. Not available right now.")

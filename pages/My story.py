@@ -17,10 +17,9 @@ started with Scratch ("It isn't a language, it is a game."), Then JavaScript ("O
 kittens on June - 2025. Kittens: Kalia and Cacto. Kalia was an early criminal. when *Rozie*Gave 6 kittens on September - 2025 and Sadly, 1 passed away, 
 then Kalia killed everyone and Ate a whole kitten. Then on September - 2025, I started *Python* ("Recommended."). on that same month, 
 it was my *Brother's* birthday. on February, It was my *Birthday*. on March - 11th - 2026, Rozie gave 4 kittens Sadly, 1 passed and 3 were safe. 
-and on March 28, My school teacher said "Yamaan came 1st." I am 10 years old and a 3rd class student Studying in **Meerut Public School, Main wing**. \n
+and on March 28, "I came 1st in 3rd class." I am 10 years old and a 3rd class student Studying in **Meerut Public School, Main wing**. \n
 *Hard Work takes time* By: ***Yamaan Faraz***
 """
-
 with st.spinner("Loading Story..."):
     time.sleep(2)
     st.progress(100, text="Steady Hands, Almost loaded...")
