@@ -23,4 +23,7 @@ st.image("img_9.png")
 st.title("5. Then click on 'send' button. you will get an message regarding your compose.")
 st.image("img_10.png")
 st.write("I will get an mail from you and you will be in the waiting list then!")
+st.write("Note for good: Today, **5ml of water** fell on my **mouse's clicker**. but i acted fast, didn't **cry**, **wiped** it, pressed it **10**"
+        " times, and filled **air** inside it with my **mouth**. if you get **trouble**, you should act fast and do **something** fast as"
+        " **possible**.")
 st.write(":streamlit:")
