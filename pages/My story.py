@@ -90,3 +90,20 @@ if os.path.exists(img_path):
 else:
     st.error("The image is still missing from the main folder! 😩")
     st.info(f"Looking for: {img_path}")
+
+import os
+
+# 1. Look for the main folder (AC-app-Practice)
+base_dir = os.path.dirname(os.path.dirname(__file__))
+
+# 2. Use the CORRECT spelling you just found
+img_path = os.path.join(base_dir, "WIN_20260401_07_33_36_Pro.jpg")
+
+# 3. The Shield: Show the image ONLY if the path is 100% real
+if os.path.exists(img_path):
+    st.title("My **Certificate**...")
+    st.image(img_path, caption="I got a free course from *school* by going to the Top position.")
+else:
+    st.error("The image is still missing from the main folder! 😩")
+    st.info(f"Looking for: {img_path}")
+
